@@ -15,4 +15,20 @@ def ucs(start, end, G, Distance, Cost):
                 if Memory[i][3] == Parent:
                     s = Parent + "->" + s
                     Parent = Memory[i][2]
-           
+            f = open("task1output.txt", "w")
+            f.write("TASK1:\n")
+            f.write("Shortest Path:" + s + "\n")
+            f.write("Shortest distance: {}". format(Distance) + "\n")
+            f.write("Total Energy Cost: {}".format(Cost) + "\n\n")
+            return
+
+        if Node in Visited:
+            continue
+        for i in range(len(G[Node])):
+            if G[Node][i] not in Visited:
+                d = Distance + \
+                    Distance["{}, {},".format(int(Node), int(G[Node][i]))]
+                c = Cost + Cost["{}, {},".format(int(Node), int(G[Node][i]))]
+                Queue.append([-d, c, Node, G[Node][i]])
+        Visited.append(Node)
+
