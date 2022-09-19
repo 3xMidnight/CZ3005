@@ -25,7 +25,7 @@ def ucs(start, end, G, Distance):
             continue
         for i in range(len(G[Node])):
             if G[Node][i] not in Visited:
-                d = dist + Distance["{}, {}".format(int(Node), int(G[Node][i]))]
+                d = dist + Distance["{},{}".format(int(Node), int(G[Node][i]))]
                 Queue.append([-d, Node, G[Node][i]])
         Visited.append(Node)
 
