@@ -11,7 +11,7 @@ G = json.load(g)
 Cost = json.load(cost)
 Coord = json.load(coord)
 Dist = json.load(dist)
-ucs ("1", "50", G, Dist, Cost)
+ucs("1", "50", G, Dist)
 with open('task_1_output.txt') as fp:
-    data1 = fp.read()
+    output1 = fp.read()
 
