@@ -1,5 +1,5 @@
 
-import task1
+import task1,task2
 from timeit import timeit
 from typing import Tuple
 import json
@@ -7,11 +7,14 @@ import json
 PERF_SAMPLES = 5000
 
 PathInfo =''
+EnergyBudget = 287932
 
 
 def main():
     G, Cost, Coord, Dist = load_json_files()
-    path1 = task1.ucs('1', '50', Dist, G)
+    task1.ucs('1', '50', Dist, G)
+
+    task2.ucs('1', '50', EnergyBudget, Dist, G, Cost)
 
 
 def load_json_files():

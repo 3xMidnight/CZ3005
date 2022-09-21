@@ -2,7 +2,7 @@ from queue import PriorityQueue
 
 def ucs(source, dest,dist, g):
     path = "No path found"
-    dist = dist
+    final_dist = dist
 
 
     prio_queue = PriorityQueue()
@@ -25,11 +25,11 @@ def ucs(source, dest,dist, g):
                 total_dist = 0
                 for i in range(len(current_path) - 1):
                     total_dist += dist[f"{current_path[i]},{current_path[i+1]}"]
-                dist = total_dist
+                final_dist = total_dist
                 print(f"Shortest path: {path}")
-                print(f"Shortest distance: {dist}")
+                print(f"Shortest distance: {final_dist}")
 
-                return path, dist
+                return path, final_dist
 
             for next in g[current_node]:
                 new_dist = dist[f"{current_node},{next}"]
@@ -41,4 +41,4 @@ def ucs(source, dest,dist, g):
                 prio_queue.put((score, new_path))
                 
     print(f"Shortest path: {path}")
-    print(f"Shortest distance: {dist}")
+    print(f"Shortest distance: {final_dist}")
