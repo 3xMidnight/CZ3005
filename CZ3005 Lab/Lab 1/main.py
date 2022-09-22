@@ -15,6 +15,8 @@ def main():
     task1.ucs('1', '50', Dist, G)
 
     task2.ucs('1', '50', EnergyBudget, Dist, G, Cost)
+    
+    task3.astar('1', '50', G, Dist, Cost, EnergyBudget, Coord)
 
 
 def load_json_files():
