@@ -2,7 +2,7 @@ from queue import PriorityQueue
 
 def ucs(source, dest,dist, g):
     path = "No path found"
-    final_dist = dist
+    final_dist = 0
 
 
     prio_queue = PriorityQueue()
