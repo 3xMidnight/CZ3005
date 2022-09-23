@@ -1,5 +1,5 @@
 
-import task1,task2
+import task1,task2, task3
 from timeit import timeit
 from typing import Tuple
 import json
