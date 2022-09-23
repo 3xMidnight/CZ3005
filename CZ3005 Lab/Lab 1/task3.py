@@ -26,7 +26,7 @@ def astar(beg, end, G, Distance, Cost, maxCost, coord):
             print(f"TASK3:\n")
             print(f"Shortest Path:" + s + "\n")
             print("Shortest Distance: {}".format(dist) + "\n")
-            print("Shortest Distance: {}".format(cost) + "\n")
+            print("Total Energy Cost: {}".format(cost) + "\n")
             return
         if node in visited:
             continue
