@@ -42,11 +42,14 @@ succeed_before(Successor_1,Successor_2):-
 	is_older_than(Successor_1, Successor_2).
 
 /* sort succession list tail based on succession rules */
-sort_successor_list(X,[Y|Z],[Y|W]):- 
+sort_successor_list(X,[Y|T],[Y|W]):- 
 	\+(succeed_before(X,Y)), !, 
-	sort_successor_list(X,Z,W).
+	sort_successor_list(X,T,W).
 
-sort_successor_list(X,Y,[X|Y]).
+sort_successor_list(X,[Y|T],[X,Y|T]):-
+	succeed_before(X,Y).
+
+sort_successor_list(X,[],[X]).
 
 /* generate succession line based on offspring list */
 generate_succession_line([],[]).
