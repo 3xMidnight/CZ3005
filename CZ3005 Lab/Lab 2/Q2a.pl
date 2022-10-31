@@ -1,4 +1,4 @@
-/* facts about gender of each Royal family successors */
+/* facts about the gender of each royal family successors */
 male(prince_charles).
 male(prince_andrew).
 male(prince_edward).
