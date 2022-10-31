@@ -1,7 +1,7 @@
 company(sumsum).
 company(appy).
 developed(sumsum,galacticaS3).
-smartphonetech(stevey,galacticaS3,sumsum).
+smartphonetech(galacticaS3).
 stolen(stevey,galacticaS3,sumsum).
 boss(stevey).
 competitors(sumsum,appy).
