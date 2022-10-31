@@ -1,10 +1,10 @@
 company(sumsum).
 company(appy).
-developed(sumsum,galacticaS3).
-smartphonetech(galacticaS3).
-stolen(stevey,galacticaS3,sumsum).
 boss(stevey).
+smartphonetech(galacticaS3).
 competitors(sumsum,appy).
+developed(sumsum,galacticaS3).
+stolen(stevey,galacticaS3,sumsum).
 
 rival(X) :- competitors(X,appy).
 business(X) :- smartphonetech(X).
