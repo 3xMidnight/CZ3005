@@ -58,6 +58,6 @@ generate_succession_line([X|Y],Succession_Line):-
 	sort_successor_list(X,List_Tail,Succession_Line).
 
 /* main function to output succession line of queen elizabeth */
-succession_line_of(Succession_Line):- 
+old_royal_succesion(Succession_Line):- 
 	findall(X,offspring_of(X,queen_elizabeth),Offspring), 
 	generate_succession_line(Offspring,Succession_Line).
